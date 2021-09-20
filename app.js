@@ -6,7 +6,7 @@ const bodyparser = require("body-parser")
 const mongoose = require('mongoose');
 mongoose.connect('mongodb+srv://sanjeevkumar:sanjeev19970@danceweb.6zxjy.mongodb.net/Contact?retryWrites=true&w=majority', 
 {useNewUrlParser: true, useUnifiedTopology: true});
-const port = 8080;
+const port = process.env.PORT || 8080;
 
 // Define the mongoose Schema
 const contactSchema = new mongoose.Schema({
