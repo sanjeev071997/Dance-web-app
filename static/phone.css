@@ -1,0 +1,59 @@
+@media screen and (max-width: 863px) {
+    #navbar {
+        flex-direction: column;
+    }
+    #navbar ul {
+       flex-direction: column;
+       text-align: center;
+    }
+    #navbar li a {
+        font-size: 30px;
+        padding: 6px 10px;
+        flex-direction: row;
+    }
+    #logo{
+        flex-direction: column;
+        margin-right: auto;
+        text-align: center;
+    }
+
+}
+/* @media screen and (max-width: 1349px) { */
+    #introSection{
+        flex-direction: column;
+        padding-bottom: 20px;
+        text-align: center;
+        font-size: 50px;
+    }
+    #introSection div.small{
+        font-size: 35px;
+    }
+    #missionSection{
+        height: auto;
+        margin: auto;
+        text-align: center;
+    }
+    #sponsorsSection{
+        display: inline-block;
+        height: auto;
+        width: 100%;
+        text-align: center;
+        background-color: white;
+    }
+    #sponsors{
+        height: 195px;
+        max-width: 1000px;
+        margin: 20px auto;
+        text-align: center;
+    }
+    #footer{
+        text-align: center;
+        font-size: 18px;
+    }
+
+    @media screen and (max-width: 863px) {
+
+    .myInput{
+        width: 330px;
+    }
+}

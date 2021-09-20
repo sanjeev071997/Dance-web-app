@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanju Baba's Dance Academy</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="../static/Contact Us.css">
+    <link rel="stylesheet" href="../static/phone.css">
+</head>
+
+<body>
+    <nav id="navbar">
+        <ul>
+            <div id="logo">
+                <img src="/static/Logo/unnamed.png" alt="">
+                SBDA
+            </div>
+            <li> <a href="/">Home</a></li>
+            <li> <a href="#">About</a></li>
+            <li> <a href="#">Services</a></li>
+            <li> <a href="#">Class Info</a></li>
+            <li> <a href="/ContactUs.hbs">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    {{!-- FORM --}}
+
+   <div class="container">
+    <h1>Contact Us</h1>
+    <form action="/ContactUs.hbs" , method="POST" class="myForm">
+        <input type="text" , class="myInput" , name="name", required placeholder="Enter Your Name">
+        <input type="phone" , class="myInput" , name="phone", required minlength="10" placeholder="Enter Your Phone Number">
+        <input type="email" , class="myInput" , name="email" , required {@gmail} placeholder="Enter Your Email Id ">
+        <input type="text" , class="myInput" , name="address" , required placeholder="Enter Your Address">
+        <input type="text" , class="myInput" , name="desc" , required placeholder="Enter Your Concern">
+        <button class="btn">Submit</button>
+              
+    </form>
+</div>
+    <footer id="footer">
+        Copyright &copy; 2021 SanjuBabaDanceAcademy.com | All rights reserved
+    </footer>
+</body>
+
+</html>
