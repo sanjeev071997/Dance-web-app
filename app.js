@@ -2,12 +2,9 @@ const express = require("express");
 const path = require("path");
 const fs = require("fs");
 const app = express();
-const bodyparser = require("body-parser")
-// const mongoose = require('mongoose');
-// mongoose.connect(process.env.MONGODB_URL ||'mongodb://localhost:27017/contact', 
-// {useNewUrlParser: true, useUnifiedTopology: true});
+const bodyparser = require("body-parser");
 const mongoose = require("mongoose");
-mongoose.connect( process.env.MONGODB_URL || "mongodb+srv://sanjeevkumar:sanjeev19970@danceweb.6zxjy.mongodb.net/Contact?retryWrites=true&w=majority", {
+mongoose.connect( process.env.MONGODB_URL || "mongodb+srv://sanjeevkumar:1xDBUs0LREdHSHY3@cluster0.id7xj.mongodb.net/Contact?retryWrites=true&w=majority", {
     useNewUrlParser:true,
     useUnifiedTopology: true
 }).then (()=>{
@@ -15,6 +12,7 @@ mongoose.connect( process.env.MONGODB_URL || "mongodb+srv://sanjeevkumar:sanjeev
 }).catch ((error)=>{
     console.log(error);
 });
+
 const port = process.env.PORT || 8080;
 
 // Define the mongoose Schema
