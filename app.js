@@ -3,9 +3,18 @@ const path = require("path");
 const fs = require("fs");
 const app = express();
 const bodyparser = require("body-parser")
-const mongoose = require('mongoose');
-mongoose.connect(process.env.MONGODB_URL ||'mongodb://localhost:27017/Contact', 
-{useNewUrlParser: true, useUnifiedTopology: true});
+// const mongoose = require('mongoose');
+// mongoose.connect(process.env.MONGODB_URL ||'mongodb://localhost:27017/contact', 
+// {useNewUrlParser: true, useUnifiedTopology: true});
+const mongoose = require("mongoose");
+mongoose.connect( process.env.MONGODB_URL || "mongodb+srv://sanjeevkumar:sanjeev19970@danceweb.6zxjy.mongodb.net/Contact?retryWrites=true&w=majority", {
+    useNewUrlParser:true,
+    useUnifiedTopology: true
+}).then (()=>{
+    console.log("connection successful ");
+}).catch ((error)=>{
+    console.log(error);
+});
 const port = process.env.PORT || 8080;
 
 // Define the mongoose Schema
